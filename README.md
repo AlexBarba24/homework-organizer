@@ -1,34 +1,8 @@
-# homework-organizer
+## Homework Organizer
 
-An Electron application with React
+An Electron application designed to help students keep track of homework assignments and exams. Students can upload syllabus pdf files and the program will read through the file using OpenAI and will automatically detects all of key events and add them t oyour google calendar.
 
-## Recommended IDE Setup
 
-- [VSCode](https://code.visualstudio.com/) + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) + [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+## Usage
 
-## Project Setup
-
-### Install
-
-```bash
-$ yarn
-```
-
-### Development
-
-```bash
-$ yarn dev
-```
-
-### Build
-
-```bash
-# For windows
-$ yarn build:win
-
-# For macOS
-$ yarn build:mac
-
-# For Linux
-$ yarn build:linux
-```
+Download executable for relevant platform and run. The GUI will prompt you to upload a pdf, and if it finds and assignments it will prompt you to sign in to google caldendar, and will upload the assignments with names, dates, times, and relevant links.
