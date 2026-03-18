@@ -186,10 +186,15 @@ def parse_pdf(message):
     presence_penalty=0
   )
   if response.choices[0].model_dump()['message']['tool_calls'] is None:
-    return
-  print(response.choices[0].model_dump()['message'])
+    return []
+  
+  assignments = []
   for call in response.choices[0].model_dump()['message']['tool_calls']:
-    print(json.loads(call['function']['arguments'])['assignment_name'])
-  # print(response.choices[0].model_dump()['message']['tool_calls'])
-
-parse_pdf("There will be physics exams on 1/14, 2/14, and 3/16 at 6pm, and a mastering physics homework due each friday between 1/10 and 2/7")
+    assignment_data = json.loads(call['function']['arguments'])
+    assignments.append({
+      'assignment_name': assignment_data.get('assignment_name', ''),
+      'due_date': assignment_data.get('due_date', ''),
+      'assignment_link': assignment_data.get('assignment_link', '')
+    })
+  
+  return assignments

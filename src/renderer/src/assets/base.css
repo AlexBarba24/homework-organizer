@@ -65,3 +65,53 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Light theme overrides (current file uses some invalid selectors like `::root`) */
+:root {
+  --ev-c-black: #f7f7fb;
+  --ev-c-black-soft: #eef0f6;
+  --ev-c-black-mute: #e7e9f0;
+
+  --ev-c-gray-1: #b3bac6;
+  --ev-c-gray-2: #a1aab7;
+  --ev-c-gray-3: #8a94a3;
+
+  --ev-c-text-1: rgba(0, 0, 0, 0.86);
+  --ev-c-text-2: rgba(20, 20, 30, 0.62);
+  --ev-c-text-3: rgba(20, 20, 30, 0.42);
+
+  --color-background: var(--ev-c-black);
+  --color-background-soft: var(--ev-c-black-soft);
+  --color-background-mute: var(--ev-c-black-mute);
+  --color-text: var(--ev-c-text-1);
+}
+
+:root {
+  --ev-c-white: #ffffff;
+  --ev-c-white-soft: #f8f8f8;
+  --ev-c-white-mute: #f2f2f2;
+
+  --ev-c-black: #f7f7fb;
+  --ev-c-black-soft: #eef0f6;
+  --ev-c-black-mute: #e7e9f0;
+
+  --ev-c-gray-1: #b3bac6;
+  --ev-c-gray-2: #a1aab7;
+  --ev-c-gray-3: #8a94a3;
+
+  --ev-c-text-1: rgba(0, 0, 0, 0.86);
+  --ev-c-text-2: rgba(20, 20, 30, 0.62);
+  --ev-c-text-3: rgba(20, 20, 30, 0.42);
+
+  --ev-button-alt-border: transparent;
+  --ev-button-alt-text: var(--ev-c-text-1);
+  --ev-button-alt-bg: var(--ev-c-gray-3);
+  --ev-button-alt-hover-border: transparent;
+  --ev-button-alt-hover-text: var(--ev-c-text-1);
+  --ev-button-alt-hover-bg: var(--ev-c-gray-2);
+
+  --color-background: var(--ev-c-black);
+  --color-background-soft: var(--ev-c-black-soft);
+  --color-background-mute: var(--ev-c-black-mute);
+  --color-text: var(--ev-c-text-1);
+}

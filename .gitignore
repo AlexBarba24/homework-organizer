@@ -1,0 +1,9 @@
+node_modules
+dist
+out
+.DS_Store
+*.log*
+
+# Google OAuth credentials (sensitive - do not commit)
+src/python/credentials.json
+src/python/token.json

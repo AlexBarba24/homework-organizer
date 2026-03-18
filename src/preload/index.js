@@ -1,8 +1,14 @@
-import { contextBridge, session } from 'electron'
+import { contextBridge, session, ipcRenderer } from 'electron'
 import { electronAPI } from '@electron-toolkit/preload'
 
 // Custom APIs for renderer
-const api = {}
+const api = {
+  parsePdf: (fileBuffer) => ipcRenderer.invoke('parse-pdf', fileBuffer),
+  addToCalendar: (assignments) => ipcRenderer.invoke('add-to-calendar', assignments),
+  checkGoogleAuth: () => ipcRenderer.invoke('check-google-auth'),
+  authenticateGoogle: () => ipcRenderer.invoke('authenticate-google'),
+  getGoogleAuthUrl: () => ipcRenderer.invoke('get-google-auth-url')
+}
 
 // Use `contextBridge` APIs to expose Electron APIs to
 // renderer only if context isolation is enabled, otherwise

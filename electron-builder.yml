@@ -5,11 +5,16 @@ directories:
 files:
   - '!**/.vscode/*'
   - '!src/*'
+  - 'src/python/**'  # Include Python files
+  - '!src/python/credentials.json'  # Exclude credentials (use env vars or inject at build time)
+  - '!src/python/token.json'  # Exclude user tokens
+  - '!venv/**'  # Exclude virtual environment
   - '!electron.vite.config.{js,ts,mjs,cjs}'
   - '!{.eslintignore,.eslintrc.cjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}'
   - '!{.env,.env.*,.npmrc,pnpm-lock.yaml}'
 asarUnpack:
   - resources/**
+  - src/python/**  # Unpack Python files so they can be executed
 win:
   executableName: homework-organizer
 nsis:

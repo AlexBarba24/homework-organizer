@@ -1,0 +1,21 @@
+# Core dependencies
+numpy>=1.24.0
+Pillow>=10.0.0
+PyPDF2>=3.0.0
+
+# PDF to image conversion
+pdf2image>=1.16.0
+
+# OCR
+pytesseract>=0.3.10
+
+# OpenAI API
+openai>=1.0.0
+
+# Google Calendar API
+google-auth>=2.23.0
+google-auth-oauthlib>=1.1.0
+google-api-python-client>=2.100.0
+
+# Optional: OpenCV for advanced image processing (will fallback to PIL if not available)
+# opencv-python-headless>=4.8.0
